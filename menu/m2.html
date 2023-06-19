@@ -23,80 +23,80 @@
             width: 1200px;
             margin: 0 auto;
         }
-        #header {
+        header {
             width: 100%;
             display: flex;
         }
-        #header .logo {
+        header .logo {
             width: 20%;
             height: 100px;
             background-color: #efefef;
         }
-        #header .nav {
+        header nav {
             width: 80%;
             background-color: #e3e3e3;
         }
-        #slider {
+        article {
             width: 100%;
             height: 300px;
             background-color: #d9d9d9;
         }
-        #contents {
+        section{
             width: 100%;
             display: flex;
         }
-        #contents .content1 {
+        section .content1 {
             width: 33.3333%;
             height: 200px;
             background-color: #d1d1d1;
         }
-        #contents .content2 {
+        section .content2 {
             width: 33.3333%;
             height: 200px;
-            background-color: #c7c7c7;
+            background-color: #999;
         }
-        #contents .content3 {
+        section .content3 {
             width: 33.3333%;
             height: 200px;
-            background-color: #bcbcbc;
+            background-color: #888;
         }
-        #footer {
+        footer {
             width: 100%;
             display: flex;
         }
-        #footer .footer1 {
+        footer .footer1 {
             width: 20%;
             height: 100px;
             background-color: #b1b1b1;
         }
-        #footer .footer2 {
+        footer .footer2 {
             width: 60%;
             height: 100px;
             background-color: #a3a3a3;
         }
-        #footer .footer3 {
+        footer .footer3 {
             width: 20%;
             height: 100px;
             background-color: #9d9d9d;
         }
         /* nav */
-        .nav > ul {
+        nav .mainmenu {
             display: flex;
             justify-content: right;
             margin-top: 30px;
         }
-        .nav > ul > li {
+        nav .mainmenu > li {
             position: relative;
         }
-        .nav > ul > li > a {
+        nav .mainmenu > li > a {
             display: inline-block;
             padding: 10px 50px;
             background-color: #b0b0b0;
         }
-        .nav > ul > li > a:hover {
+        nav .mainmenu > li > a:hover {
             background-color: #696969;
         }
-        .nav > ul > li > ul {
+        nav .mainmenu > li > ul {
             position: absolute;
             left: 0; 
             top: 38px;
@@ -104,32 +104,34 @@
             text-align: center;
             display: none;
         }
-        .nav > ul > li > ul > li > a {
+        nav .mainmenu .submenu a {
             display: inline-block;
             padding: 10px;
             background-color: #c1c1c1;
             width: 100%;
             box-sizing: border-box;
         }
-        .nav > ul > li > ul > li > a:hover {
+        nav .mainmenu .submenu a:hover {
             background-color: #8f8f8f;
         }
         /* 자바스크립트 CSS */
-        .nav > ul > li > ul {
+        nav > ul > li > ul {
             display: block;
             height: 0;
-            overflow: hidden;
-            transition: all 600ms;
+            
+        }
+        nav .mainmenu:hover .submenu{
+
         }
     </style>
 </head>
 <body>
     <body>
         <div id="wrap">
-            <div id="header">
+            <header>
                 <div class="logo"></div>
-                <nav class="nav">
-                    <ul>
+                <nav>
+                    <ul class="mainmenu">
                         <li>
                             <a href="#">메뉴1</a>
                             <ul class="submenu">
@@ -168,25 +170,25 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </header>
             <!-- //header -->
     
-            <div id="slider">
-            </div>
+            <article>
+            </article>
             <!-- //slider -->
     
-            <div id="contents">
+            <section>
                 <div class="content1"></div>
                 <div class="content2"></div>
                 <div class="content3"></div>
-            </div>
+            </section>
             <!-- //contents -->
     
-            <div id="footer">
+            <footer>
                 <div class="footer1"></div>
                 <div class="footer2"></div>
                 <div class="footer3"></div>
-            </div>
+            </footer>
             <!-- //footer -->
         </div>
         <!-- //wrap -->
@@ -195,17 +197,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script>
         $(function(){
-            $(".nav > ul > li").mouseover(function(){
-                $(".nav > ul > li > ul").stop().slideDown();
+            $("nav > ul > li").mouseover(function(){
+                $("nav > ul > li > ul").stop().slideDown();
             });
-            $(".nav > ul > li").mouseout(function(){
-                $(".nav > ul > li > ul").stop().slideUp();
+            $("nav > ul > li").mouseout(function(){
+                $("nav > ul > li > ul").stop().slideUp();
             });
         });
     </script> -->
     <script>
         window.onload = function(){
-            let navList = document.querySelector(".nav > ul");
+            let navList = document.querySelector("nav > ul");
 
             navList.addEventListener("mouseover", function(){
                 navList.querySelectorAll(".submenu").forEach(sub => {

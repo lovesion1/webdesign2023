@@ -15,65 +15,65 @@
             display: flex;
             flex-wrap: wrap;
         }
-        #aside {
+        header {
             width: 200px;
         }
-        #aside .logo {
+        header .logo {
             width: 100%;
             height: 100px;
             background-color: #efefef;
         }
-        #aside .nav {
+        header nav {
             height: 550px;
             background-color: #e3e3e3;
         }
-        #main {
+        main {
             width: calc(100% - 200px);
         }
-        #slider {
+        article {
             width: 100%;
             display: flex;
         }
-        #slider .image {
+        article .image {
             width: calc(100% - 230px);
             height: 400px;
             background-color: #d9d9d9;
         }
-        #slider .banner {
+        article .banner {
             width: 230px;
             height: 400px;
             background-color: #d1d1d1;
         }
-        #contents {
+        section {
             width: 100%;
             display: flex;
         }
-        #contents .content1 {
+        section .content1 {
             width: 50%;
             height: 250px;
             background-color: #c7c7c7;
         }
-        #contents .content2 {
+        section .content2 {
             width: 50%;
             height: 250px;
             background-color: #bcbcbc;
         }
-        #footer {
+        footer {
             width: 100%;
             display: flex;
         }
-        #footer .footer1 {
-            width: 20%;
+        footer .footer1 {
+            width: 200px;
             height: 100px;
             background-color: #b1b1b1;
         }
-        #footer .footer2 {
-            width: 60%;
+        footer .footer2 {
+            width: calc(100% - 500px);
             height: 100px;
             background-color: #a3a3a3;
         }
-        #footer .footer3 {
-            width: 20%;
+        footer .footer3 {
+            width: 300px;
             height: 100px;
             background-color: #9d9d9d;
         }
@@ -81,34 +81,34 @@
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside">
+        <header>
             <h1 class="logo"></h1>
-            <nav class="nav"></nav>
-        </aside>
-        <!-- //asdie -->
+            <nav></nav>
+        </header>
+        <!-- header -->
 
-        <main id="main">
-            <article id="slider">
+        <main>
+            <article>
                 <div class="image"></div>
                 <div class="banner"></div>
             </article>
             <!-- //article -->
 
-            <section id="contents">
+            <section>
                 <div class="content1"></div>
                 <div class="content2"></div>
             </section>
-            <!-- //contents -->
+            <!-- section -->
         </main>
-        <!-- //main -->
+        <!-- main -->
 
-        <footer id="footer">
+        <footer>
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
         </footer>
-        <!-- //footer -->
+        <!-- footer -->
     </div>
-    <!-- //wrap -->
+    <!-- wrap -->
 </body>
 </html>

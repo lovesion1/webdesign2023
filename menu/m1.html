@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹디자인기능사 메뉴 M-1</title>
-    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: 'GmarketSans';
         }
         li {
             list-style: none;
@@ -23,115 +22,115 @@
             width: 1200px;
             margin: 0 auto;
         }
-        #header {
+        header {
             width: 100%;
             display: flex;
         }
-        #header .logo {
+        header .logo {
             width: 20%;
             height: 100px;
             background-color: #efefef;
         }
-        #header .nav {
+        header nav {
             width: 80%;
             background-color: #e3e3e3;
         }
-        #slider {
+        article {
             width: 100%;
             height: 300px;
             background-color: #d9d9d9;
         }
-        #contents {
+        section {
             width: 100%;
             display: flex;
         }
-        #contents .content1 {
+        section .content1 {
             width: 33.3333%;
             height: 200px;
             background-color: #d1d1d1;
         }
-        #contents .content2 {
+        section .content2 {
             width: 33.3333%;
             height: 200px;
             background-color: #c7c7c7;
         }
-        #contents .content3 {
+        section .content3 {
             width: 33.3333%;
             height: 200px;
             background-color: #bcbcbc;
         }
-        #footer {
+        footer {
             width: 100%;
             display: flex;
         }
-        #footer .footer1 {
+        footer .footer1 {
             width: 20%;
             height: 100px;
             background-color: #b1b1b1;
         }
-        #footer .footer2 {
+        footer .footer2 {
             width: 60%;
             height: 100px;
             background-color: #a3a3a3;
         }
-        #footer .footer3 {
+        footer .footer3 {
             width: 20%;
             height: 100px;
             background-color: #9d9d9d;
         }
         /* nav */
-        .nav > ul {
+        nav .mainmenu {
             display: flex;
             justify-content: right;
             margin-top: 30px;
         }
-        .nav > ul > li {
+        nav .mainmenu > li {
             position: relative;
         }
-        .nav > ul > li > a {
+        nav .mainmenu > li > a {
             display: inline-block;
             padding: 10px 50px;
+            font-weight: bold;
             background-color: #b0b0b0;
         }
-        .nav > ul > li > a:hover {
+        nav .mainmenu > li > a:hover {
             background-color: #696969;
         }
-        .nav > ul > li > ul {
+        nav .mainmenu .submenu {
             position: absolute;
             left: 0;
-            top: 38px;
+            top: 41px;
             background-color: #c7c7c7;
             width: 100%;
             text-align: center;
             display: none;
+            overflow: hidden;
+            transition: .6s;
         }
-        .nav > ul > li > ul > li > a {
+        nav .mainmenu > li:hover .submenu {
+            display: block;
+            height: 155px;
+
+        }
+        nav .mainmenu .submenu a {
             display: inline-block;
             padding: 10px;
             background-color: #c1c1c1;
             width: 100%;
             box-sizing: border-box;
         }
-        .nav > ul > li > ul > li > a:hover {
+        nav .mainmenu .submenu a:hover {
             background-color: #8f8f8f;
         }
-
-        /* 자바스크립트용 CSS */
-        .nav > ul > li > ul {
-            display: block;
-            height: 0;
-            /* height: 155px; */
-            overflow: hidden;
-            transition: all 600ms;
-        }
+       
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
+        <header>
             <div class="logo"></div>
-            <nav class="nav">
-                <ul>
+            <nav>
+                <ul class="mainmenu">
                     <li><a href="#">메뉴1</a>
                         <ul class="submenu">
                             <li><a href="#">서브메뉴1-1</a></li>
@@ -166,55 +165,28 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
         <!-- //header -->
 
-        <div id="slider">
-        </div>
+        <article>
+        </article>
         <!-- //slider -->
 
-        <div id="contents">
+        <section>
             <div class="content1"></div>
             <div class="content2"></div>
             <div class="content3"></div>
-        </div>
+        </section>
         <!-- //contents -->
 
-        <div id="footer">
+        <footer>
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
-        </div>
+        </footer>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script>
-        $(function(){
-            $(".nav > ul > li").mouseover(function(){
-                $(this).find(".submenu").stop().slideDown();
-            });
-            $(".nav > ul > li").mouseout(function(){
-                $(this).find(".submenu").stop().slideUp();
-            });
-        });
-    </script> -->
-    <script>
-        window.onload = function(){
-            let navList = document.querySelectorAll(".nav > ul > li");
-            
-            navList.forEach(function(navItem){
-                navItem.addEventListener("mouseover", function(){
-                    this.querySelector(".submenu").style.height = "155px";
-                });
-            });
-            navList.forEach(function(navItem){
-                navItem.addEventListener("mouseout", function(){
-                    this.querySelector(".submenu").style.height = "0px";
-                });
-            });
-        }
-    </script>
 </body>
 </html>

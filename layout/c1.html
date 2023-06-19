@@ -14,66 +14,66 @@
             width: 1000px;
             display: flex;
         }
-        #aside {
+        header {
             width: 20%;
         }
-        #aside .logo {
+        header .logo {
             width: 100%;
             height: 100px;
             background-color: #efefef;
         }
-        #aside .nav {
+        header nav {
             width: 100%;
             height: 550px;
             background-color: #d9d9d9;
         }
-        #main {
+        main {
             width: 80%;
             height: 650px;
             background-color: #e3e3e3;
         }
-        #slider {
+        main>article{
             width: 100%;
             height: 350px;
             background-color: #c7c7c7;
         }
-        #contents {
+        section {
             width: 100%;
             display: flex;
         }
-        #contents .content1 {
+        section .content1 {
             width: 33.3333%;
             height: 200px;
             background-color: #bcbcbc;
         }
-        #contents .content2 {
+        section .content2 {
             width: 33.3333%;
             height: 200px;
             background-color: #b1b1b1;
         }
-        #contents .content3 {
+        section .content3 {
             width: 33.3333%;
             height: 200px;
             background-color: #a3a3a3;
         }
-        #footer {
+        footer {
             width: 100%;
             display: flex;
         }
-        #footer .footer1 {
+        footer .footer1 {
             width: 20%;
             height: 100px;
             background-color: #9d9d9d;
         }
-        #footer .footer2 {
+        footer .footer2 {
             width: 80%;
         }
-        #footer .footer2 .footer2-1 {
+        footer .footer2 .footer2-1 {
             width: 100%;
             height: 50px;
             background-color: #929292;
         }
-        #footer .footer2 .footer2-2 {
+        footer .footer2 .footer2-2 {
             width: 100%;
             height: 50px;
             background-color: #838383;
@@ -82,35 +82,35 @@
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside">
+        <header>
             <h1 class="logo"></h1>
-            <nav class="nav"></nav>
-        </aside>
-        <!-- //aside -->
+            <nav></nav>
+        </header>
+        <!-- header -->
 
-        <main id="main">
-            <article id="slider">
+        <main>
+            <article>
             </article>
-            <!-- //article -->
+            <!-- article -->
 
-            <section id="contents">
+            <section>
                 <article class="content1"></article>
                 <article class="content2"></article>
                 <article class="content3"></article>
             </section>
-            <!-- //contents -->
+            <!-- section -->
 
-            <footer id="footer">
+            <footer>
                 <div class="footer1"></div>
                 <div class="footer2">
                     <div class="footer2-1"></div>
                     <div class="footer2-2"></div>
                 </div>
             </footer>
-            <!-- //footer -->
+            <!-- footer -->
         </main>
-        <!-- //main -->
+        <!-- main -->
     </div>
-    <!-- //wrap -->
+    <!-- wrap -->
 </body>
 </html>

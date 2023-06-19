@@ -15,29 +15,29 @@
             display: flex;
             flex-wrap: wrap;
         }
-        #aside {
+        header {
             width: 200px;
         }
-        #aside h1 {
+        header h1 {
             width: 100%;
             height: 100px;
             background-color: #efefef;
         }
-        #aside nav {
+        header nav {
             width: 100%;
             height: 750px;
             background-color: #e3e3e3;
         }
-        #main {
+        main {
             width: calc(100% - 200px);
         }
-        #slider {
+        article {
             width: 100%;
             height: 400px;
             background-color: #d9d9d9;
             position: relative;
         }
-        #slider .link {
+        article .link {
             position: absolute;
             right: 0;
             top: 0;
@@ -55,24 +55,24 @@
             height: 250px;
             background-color: #c7c7c7;
         }
-        #footer {
+        footer {
             width: 100%;
             display: flex;
         }
-        #footer .footer1 {
-            width: 20%;
+        footer .footer1 {
+            width: 200px;
             height: 120px;
             background-color: #bcbcbc;
         }
-        #footer .footer2 {
-            width: 80%;
+        footer .footer2 {
+            width: calc(100% - 200px);
         }
-        #footer .footer2 .footer2-1 {
+        footer .footer2 .footer2-1 {
             width: 100%;
             height: 60px;
             background-color: #b1b1b1;
         }
-        #footer .footer2 .footer2-2 {
+        footer .footer2 .footer2-2 {
             width: 100%;
             height: 60px;
             background-color: #a3a3a3;
@@ -81,29 +81,29 @@
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside">
+        <header>
             <h1></h1>
             <nav></nav>
-        </aside>
-        <!-- //aside -->
+        </header>
+        <!-- header -->
 
-        <main id="main">
-            <article id="slider">
+        <main>
+            <article>
                 <div class="link"></div>
             </article>
-            <article id="banner"></article>
+            <section id="banner"></section>
             <section id="contents"></section>
         </main>
-        <!-- //main -->
+        <!-- main -->
 
-        <footer id="footer">
+        <footer>
             <div class="footer1"></div>
             <div class="footer2">
                 <div class="footer2-1"></div>
                 <div class="footer2-2"></div>
             </div>
         </footer>
-        <!-- //footer -->
+        <!-- footer -->
     </div>
     <!-- //wrap -->
 </body>
